@@ -1,0 +1,94 @@
+.my-avatar {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.my-avatar__picture {
+  border-radius: 8px;
+}
+
+.my-avatar__description-and-edit-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 420px;
+}
+
+.my-avatar__description {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.my-avatar__name {
+  font-size: 32px;
+  max-width: 420px;
+  margin: 0px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.my-avatar__title {
+  font-size: 16px;
+  opacity: 70%;
+  margin: 0px;
+  max-width: 420px;
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.my-avatar__edit-button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  opacity: 70%;
+  align-self: start;
+}
+
+.my-avatar__edit-button:hover {
+  opacity: 100%;
+}
+
+@media screen and (max-width: 880px)  {
+  .my-avatar {
+    flex-direction: column;
+    gap:12px;
+  }
+
+  .my-avatar__picture {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto;
+  }
+
+  .my-avatar__description-and-edit-button {
+    gap: 32px;
+  }
+
+  .my-avatar__description {
+    gap: 6px;
+    text-align: center;
+
+  }
+
+  .my-avatar__name {
+    font-size: 20px;
+    height: 20px;
+    line-height: 100%;
+  }
+
+  .my-avatar__title {
+    font-size: 16px;
+  }
+
+  .my-avatar__edit-button {
+    margin: 0 auto;
+  }
+}

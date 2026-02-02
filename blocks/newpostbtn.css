@@ -1,0 +1,34 @@
+.new-post-btn {
+  padding: 18px 32px;
+  border: none;
+  background-color: #212121;
+  border-radius: 8px;
+  color: #fcf5e5;
+  font-size: 16px;
+  align-self: end;
+}
+
+.new-post-btn__plus {
+  width: 12px;
+  height: 12px;
+}
+
+.new-post-btn:hover {
+  opacity: 80%;
+}
+
+@media screen and (max-width: 880px) {
+  .new-post-btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .new-post-btn__plus {
+    width: 12px;
+    height: 12px;
+  }
+
+  .new-post-btn:hover {
+    opacity: 80%;
+  }
+}

@@ -1,0 +1,14 @@
+.menubar {
+  width: 100%;
+  border-bottom: 1px;
+  background-color: rgba(250, 250, 250, .8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 26px;
+  width: 94px;
+  margin: 10px auto;
+}
