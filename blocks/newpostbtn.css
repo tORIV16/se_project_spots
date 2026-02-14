@@ -6,6 +6,7 @@
   color: #fcf5e5;
   font-size: 16px;
   align-self: end;
+  transition: opacity 0.3s ease;
 }
 
 .new-post-btn__plus {
@@ -17,7 +18,7 @@
   opacity: 80%;
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 630px) {
   .new-post-btn {
     margin-top: 20px;
     width: 100%;

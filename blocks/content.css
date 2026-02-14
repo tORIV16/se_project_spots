@@ -7,13 +7,13 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 1320px) and (min-width:880px) {
+@media screen and (max-width: 1320px) and (min-width:630px) {
   .content {
     max-width: 880px;
   }
 }
 
-@media screen and (max-width: 880px) {
+@media screen and (max-width: 630px) {
   .content {
     max-width: 288px;
   }

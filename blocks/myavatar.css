@@ -5,7 +5,10 @@
 }
 
 .my-avatar__picture {
+  width: 190px;
+  height:190px;
   border-radius: 8px;
+  gap: 20px;
 }
 
 .my-avatar__description-and-edit-button {
@@ -23,8 +26,11 @@
 
 .my-avatar__name {
   font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  color: #212121;
   max-width: 420px;
-  margin: 0px;
+  margin: 0 0 12px;
   display: -webkit-box;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -34,7 +40,9 @@
 
 .my-avatar__title {
   font-size: 16px;
-  opacity: 70%;
+  font-weight: 500px;
+  line-height: 1;
+  color: #212121B2;
   margin: 0px;
   max-width: 420px;
   display: -webkit-box;
@@ -45,9 +53,14 @@
 }
 
 .my-avatar__edit-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 500px;
+  cursor: pointer;
   border: none;
   background-color: transparent;
-  font-size: 16px;
   opacity: 70%;
   align-self: start;
 }
@@ -56,10 +69,15 @@
   opacity: 100%;
 }
 
-@media screen and (max-width: 880px)  {
+.my-avatar__edit-button:focus-visible {
+  outline: 2px solid #0066cc;
+  outline-offset: 2px;
+}
+
+@media screen and (max-width: 630px)  {
   .my-avatar {
     flex-direction: column;
-    gap:12px;
+    gap: 12px;
   }
 
   .my-avatar__picture {
@@ -80,7 +98,6 @@
 
   .my-avatar__name {
     font-size: 20px;
-    height: 20px;
     line-height: 100%;
   }
 
