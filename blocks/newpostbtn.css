@@ -1,5 +1,5 @@
 .new-post-btn {
-  padding: 18px 32px;
+  padding: 18px 24px;
   border: none;
   background-color: #212121;
   border-radius: 8px;
@@ -7,6 +7,10 @@
   font-size: 16px;
   align-self: end;
   transition: opacity 0.3s ease;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
 }
 
 .new-post-btn__plus {
@@ -14,22 +18,18 @@
   height: 12px;
 }
 
+.new-post-btn-text {
+  margin: 0;
+}
+
 .new-post-btn:hover {
   opacity: 80%;
 }
 
-@media screen and (max-width: 630px) {
+@media screen and (max-width: 627px) {
   .new-post-btn {
     margin-top: 20px;
     width: 100%;
-  }
-
-  .new-post-btn__plus {
-    width: 12px;
-    height: 12px;
-  }
-
-  .new-post-btn:hover {
-    opacity: 80%;
+    justify-content: center;
   }
 }

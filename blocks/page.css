@@ -1,7 +1,11 @@
 .page {
   background-color: #FCF5E5;
-  object-fit: fill;
-  font-family: Poppins;
+  font-family: 'Poppins', Arial, Helvetica, sans-serif;
   color: #212121;
-  padding: 34px 20px 0;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
