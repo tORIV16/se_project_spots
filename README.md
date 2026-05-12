@@ -1,21 +1,25 @@
 # Project 3: Spots
 
-### Overview  
+Social Media Web Application where you are able to edit your own profile, add few posts and like them.
 
-* Intro  
-* Figma  
-* Images  
-  
-**Intro**
-  
-This project is made so all the elements are displayed correctly on popular screen sizes. We recommend investing more time in completing this project, since it's more difficult than previous ones.  
-  
-**Figma**  
-  
-* [Link to the project on Figma](https://www.figma.com/file/BBNm2bC3lj8QQMHlnqRsga/Sprint-3-Project-%E2%80%94-Spots?type=design&node-id=2%3A60&mode=design&t=afgNFybdorZO6cQo-1)
-  
-**Images**  
-  
-The way you'll do this at work is by exporting images directly from Figma — we recommend doing that to practice more. Don't forget to optimize them [here](https://tinypng.com/), so your project loads faster. 
-  
-Good luck and have fun!
+## Technologies Used
+
+- Computer with VS Code
+- DOT from TripleTen
+- TripleTen Material
+
+## A Look Into...
+
+![First View of Website, Showing Fully](./images/spots_project_view_1.png "Spots Website 1")
+
+![Second View of Website, For Smaller Screens Where It Starts To get Smaller](./images/spots_project_view_2.png "Spots Website 2")
+
+![Final View of Website, Showing Mobile View](./images/spots_project_view_3.png "Spots Website 3")
+
+## Website
+
+Come visit our [Website](https://toriv16.github.io/se_project_spots/)
+
+## Learn More Project Pitch
+
+To learn more Watch [This Pitch](https://drive.google.com/file/d/1Z_19wfYg2OYHgHCswPkQ3oQXVMVAsUT0/view?usp=sharing). Here I will go over the basics and my Train of thoughts when working on this.
