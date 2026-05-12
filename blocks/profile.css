@@ -14,7 +14,7 @@
   border-radius: 8px;
 }
 
-.profile_column {
+.profile__column {
   display: flex;
   flex-direction: column;
   margin-right: auto;
@@ -85,7 +85,7 @@
     margin: 0 auto 12px;
   }
 
-  .profile_column {
+  .profile__column {
     margin: 0 auto;
     align-items: center;
   }
