@@ -22,6 +22,7 @@
 }
 
 .card__name {
+  max-width: 353px;
   margin: 0;
   font-size: 20px;
   line-height: 1.2;
@@ -54,6 +55,7 @@
 
   .card__name {
     font-size: 16px;
+    max-width: 235px;
   }
 
   .card__like {
