@@ -10,11 +10,11 @@ Social Media Web Application where you are able to edit your own profile, add fe
 
 ## A Look Into...
 
-![First View of Website, Showing Fully](./images/spots_project_view_1.png "Spots Website 1")
+![First View of Website, Showing Fully](./images/spots_project_view_1_50.png "Spots Website 1")
 
-![Second View of Website, For Smaller Screens Where It Starts To get Smaller](./images/spots_project_view_2.png "Spots Website 2")
+![Second View of Website, For Smaller Screens Where It Starts To get Smaller](./images/spots_project_view_2_50.png "Spots Website 2")
 
-![Final View of Website, Showing Mobile View](./images/spots_project_view_3.png "Spots Website 3")
+![Final View of Website, Showing Mobile View](./images/spots_project_view_3_50.png "Spots Website 3")
 
 ## Website
 
