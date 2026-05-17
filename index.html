@@ -11,18 +11,16 @@
   <link rel="icon" href="favicon.ico">
 </head>
 <body>
+
+
+
+
+
+
   <header class="header">
     <img src="./images/spots_logo.svg" class="header__logo" alt="Spots logo">
   </header>
   <main class="page">
-
-
-
-
-
-
-
-
 
     <section class="profile">
 
@@ -49,19 +47,11 @@
 
         <img src="./images/Plus_icon.png" alt="Plus Icon" class="new-post-btn__plus">
 
-        <p class="new-post-btn-text">New Post</p>
+        <p class="new-post-btn__text">New Post</p>
 
       </button>
 
     </section>
-
-
-
-
-
-
-
-
 
 
     <section class="cards">
@@ -133,9 +123,67 @@
       </ul>
 
     </section>
+
     <footer class="footer">
       <p>2025 © Spots</p>
     </footer>
+
+    <div class="modal">
+
+      <div class="modal__container">
+
+        <div class="modal__header">
+          <button type="button" class="modal__close-btn"><img src="./images/close_btn.svg" class="modal__close-btn-img" alt="Close Button"></button>
+          <h2 class="modal__header-title">Edit profile</h2>
+        </div>
+
+        <form class="modal__form">
+
+          <label for="edit-name" class="modal__label">
+            Name
+            <input id="edit-name" class="modal__input" type="text" placeholder="Type your name">
+          </label>
+          <label for="edit-description" class="modal__label">
+            Description
+          <input id="edit-description" class="modal__input" type="text" placeholder="Describe yourself">
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+
+        </form>
+
+      </div>
+
+    </div>
+    <div class="modal modal_is-opened">
+
+      <div class="modal__container">
+
+        <div class="modal__header">
+
+          <button type="button" class="modal__close-btn"><img src="./images/close_btn.svg" class="modal__close-btn-img" alt="Close Button"></button>
+
+          <h2 class="modal__header-title">New Post</h2>
+
+        </div>
+
+        <form class="modal__form">
+
+          <label for="post-img-link" class="modal__label">
+            Image Link
+            <input id="post-img-link" class="modal__input" type="text" placeholder="Paste a link to the picture">
+          </label>
+          <label for="post-caption" class="modal__label">
+            Caption
+          <input id="post-caption" class="modal__input" type="text" placeholder="Type your caption">
+          </label>
+          <button type="submit" class="modal__submit-btn">Save</button>
+
+        </form>
+
+      </div>
+
+    </div>
   </main>
+
 </body>
 </html>

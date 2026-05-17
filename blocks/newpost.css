@@ -18,13 +18,21 @@
   height: 12px;
 }
 
-.new-post-btn-text {
+.new-post-btn__text {
   margin: 0;
 }
 
 .new-post-btn:hover {
   opacity: 80%;
 }
+
+.new-post {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.new-post__close {}
 
 @media screen and (max-width: 627px) {
   .new-post-btn {
