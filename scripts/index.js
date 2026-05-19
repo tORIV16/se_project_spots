@@ -70,8 +70,9 @@ function handleAddCardSubmit(evt) {
 
 
   console.log(link, caption);
-  closeModal(editnewPostModal)
+  closeModal(newPostModal);
+  addCardFormElement.reset();
 }
 
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
-addCardFormElement.addEventListener("Submit", handleAddCardSubmit);
+addCardFormElement.addEventListener("submit", handleAddCardSubmit);
