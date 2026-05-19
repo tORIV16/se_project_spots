@@ -22,6 +22,7 @@
 }
 
 .modal__container {
+  box-sizing: content-box;
   margin-top: 270px;
   max-width: 630px;
   padding: 30px 50px;
@@ -46,6 +47,7 @@
   background-color: transparent;
   border: none;
   opacity: 40%;
+  cursor: pointer
 }
 
 .modal__close-btn:hover {
@@ -97,6 +99,7 @@
   color: white;
   padding: 16px;
   text-align: center;
+  cursor: pointer
 }
 
 @media screen and (max-width: 879px) {
