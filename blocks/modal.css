@@ -48,12 +48,12 @@
 .modal__close-btn {
   background-color: transparent;
   border: none;
-  opacity: 40%;
+  opacity: 0.4;
   cursor: pointer;
 }
 
 .modal__close-btn:hover {
-  opacity: 100%;
+  opacity: 1;
 }
 
 .modal__header-title{
@@ -89,7 +89,7 @@
 }
 
 .modal__input:hover {
-  border-color: rgba(33, 33, 33, 1)
+  border-color: rgba(33, 33, 33, 1);
 }
 
 .modal__submit-btn {
@@ -103,6 +103,10 @@
   padding: 16px;
   text-align: center;
   cursor: pointer
+}
+
+.modal__submit-btn:hover {
+  background-color: #21212160;
 }
 
 .modal__container-fullscreen {
@@ -148,19 +152,23 @@
   top: 0px;
   right: 5px;
   fill: white;
-  opacity: 100%;
+  opacity: 1;
 }
 
 .modal__close-btn-white:hover {
-  opacity: 60%;
+  opacity: 0.6;
 }
 
 
 @media screen and (max-width: 627px) {
+  .modal {
+    padding: 0 20px;
+  }
+
   .modal__container {
-    width: calc(320px - 24px);
-    margin: 270px 20px 0;
-    padding: 12px;
+    max-width: 288px;
+    width: 100%;
+    padding: 24px;
     gap: 24px;
   }
 

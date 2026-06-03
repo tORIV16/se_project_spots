@@ -11,7 +11,7 @@
   flex-direction: row;
   align-items: center;
   gap: 8px;
-  cursor: pointer
+  cursor: pointer;
 }
 
 .new-post-btn__plus {
@@ -20,7 +20,7 @@
 }
 
 .new-post-btn:hover {
-  opacity: 80%;
+  opacity: 0.8;
 }
 
 .new-post {
