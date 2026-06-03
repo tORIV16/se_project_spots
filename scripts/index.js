@@ -39,7 +39,7 @@ const captionInput = addCardFormElement.querySelector("#post-caption");
 
 // Open Post
 const openCardModal = document.querySelector("#open-image-modal");
-const openCardElement = openCardModal.querySelector(".modal__container--fullscreen")
+const openCardElement = openCardModal.querySelector(".modal__container-fullscreen")
 const openCardImage = openCardElement.querySelector(".modal__picture");
 const openCardCaption = openCardElement.querySelector(".modal__title");
 
@@ -152,9 +152,6 @@ closeNewPost.addEventListener("click", () => {
 });
 
 
-// -------------- Open Card Content ------------------ //
-
-
-
+// -------- Form Submits -------- //
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 addCardFormElement.addEventListener("submit", handleAddCardSubmit);

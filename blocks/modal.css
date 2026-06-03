@@ -52,14 +52,8 @@
   cursor: pointer;
 }
 
-
-
 .modal__close-btn:hover {
   opacity: 100%;
-}
-
-.modal__close-btn--white:hover {
-  opacity: 60%;
 }
 
 .modal__header-title{
@@ -111,7 +105,7 @@
   cursor: pointer
 }
 
-.modal__container--fullscreen {
+.modal__container-fullscreen {
   box-sizing: content-box;
   display: flex;
   flex-direction: column;
@@ -149,12 +143,16 @@
   font-size: 20px;
 }
 
-.modal__close-btn--white {
+.modal__close-btn-white {
   position: absolute;
   top: 0px;
   right: 5px;
   fill: white;
   opacity: 100%;
+}
+
+.modal__close-btn-white:hover {
+  opacity: 60%;
 }
 
 
@@ -186,7 +184,7 @@
     padding: 18px;
   }
 
-  .modal__container--fullscreen {
+  .modal__container-fullscreen {
     max-width: 288px;
     align-items: center;
   }
@@ -203,7 +201,7 @@
     font-size: 16px;
   }
 
-  .modal__close-btn--white {
+  .modal__close-btn-white {
     position: static;
     align-self: flex-end;
   }
