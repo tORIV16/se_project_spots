@@ -152,7 +152,7 @@
   transform: translate(52.5px, 40px);
 }
 
-.modal__close-btn-white:hover {
+.modal__close-btn_type_preview:hover {
   opacity: 0.6;
 }
 
@@ -167,6 +167,10 @@
     width: 100%;
     padding: 22px 12px 12px;
     gap: 24px;
+  }
+
+  .modal__container-images {
+    max-width: 300px;
   }
 
   .modal__form {
@@ -197,7 +201,8 @@
     font-size: 16px;
   }
 
-  .modal__close-btn-white {
+  .modal__close-btn_type_preview {
     transform: none;
+    max-width: 300px;
   }
 }
