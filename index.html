@@ -36,7 +36,9 @@
             <!---  Reminder! This is where the Posts Go  -->
           </ul>
         </section>
+
         <div class="modal" id="edit-profile-modal">
+          <button class="modal__exit"></button>
           <div class="modal__container">
             <div class="modal__header">
               <button type="button" class="modal__close-btn"><img src="./images/close_btn.svg" class="modal__close-btn-img" alt="Close Button"></button>
@@ -45,17 +47,20 @@
             <form class="modal__form" name="editProfileForm">
               <label for="edit-name" class="modal__label">
                 Name
-                <input id="edit-name" class="modal__input" type="text" placeholder="Type your name" required>
+                <input id="edit-name" class="modal__input" type="text" placeholder="Type your name" required autofocus minlength="2" maxlength="40">
+                <span id="edit-name-error" class="modal__error">Error</span>
               </label>
               <label for="edit-description" class="modal__label">
               Description
-              <input id="edit-description" class="modal__input" type="text" placeholder="Describe yourself" required>
+              <input id="edit-description" class="modal__input" type="text" placeholder="Describe yourself" required minlength="2" maxlength="200">
+                <span id="edit-description-error" class="modal__error">Error</span>
               </label>
               <button type="submit" class="modal__submit-btn">Save</button>
             </form>
           </div>
         </div>
         <div class="modal" id="new-post-modal">
+          <button class="modal__exit"></button>
           <div class="modal__container">
             <div class="modal__header">
               <button type="button" class="modal__close-btn"><img src="./images/close_btn.svg" class="modal__close-btn-img" alt="Close Button"></button>
@@ -65,16 +70,19 @@
               <label for="post-img-link" class="modal__label">
                 Image Link
                 <input id="post-img-link" class="modal__input" type="url" placeholder="Paste a link to the picture" required>
+                <span id="post-img-link-error" class="modal__error">Error</span>
               </label>
               <label for="post-caption" class="modal__label">
                 Caption
-                <input id="post-caption" class="modal__input" type="text" placeholder="Type your caption" required>
+                <input id="post-caption" class="modal__input" type="text" placeholder="Type your caption" required minlength="2" maxlength="30">
+                <span id="post-caption-error" class="modal__error">Error</span>
               </label>
               <button type="submit" class="modal__submit-btn">Save</button>
             </form>
           </div>
         </div>
         <div class="modal" id="open-image-modal">
+          <button class="modal__exit"></button>
           <div class="modal__container-images">
             <button type="button" class="modal__close-btn modal__close-btn_type_preview"><img src="./images/close_btn--white.svg" class="modal__close-btn-img" alt="Close Button"></button>
             <img src="#" alt="#" class="modal__picture">
@@ -96,6 +104,7 @@
         <p>2025 © Spots</p>
       </footer>
     </div>
+    <script src="./scripts/validation.js"></script>
     <script src="./scripts/index.js"></script>
   </body>
 </html>

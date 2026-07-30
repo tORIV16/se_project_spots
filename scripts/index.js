@@ -19,29 +19,44 @@ const initialCards = [{
   link : "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/6-photo-by-moritz-feldmann-from-pexels.jpg"
 }];
 
+
+//Forms
+const formElements = document.forms;
+const profileFormElement = document.forms[0];
+const addCardFormElement = document.forms[1];
+
+//Modals
+const allModals = document.querySelectorAll(".modal");
+console.log(allModals);
+
+
+
 // Main Profile
 const profileNameElement = document.querySelector(".profile__name");
 const profileJobElement = document.querySelector(".profile__title");
-
-//Forms
-const profileFormElement = document.forms["editProfileForm"];
-const addCardFormElement = document.forms["postImageForm"];
 
 
 // Edit Profile
 const editProfileBtn = document.querySelector(".profile__edit-button");
 const editProfileModal = document.querySelector("#edit-profile-modal");
+
+// Edit Profile - FORM ITEMS
 const nameInput = profileFormElement.querySelector("#edit-name");
 const jobInput = profileFormElement.querySelector("#edit-description");
+const editProfileSubmitBtn = profileFormElement.querySelector(".modal__submit-btn");
 
 // New Post
 const newPostBtn = document.querySelector(".new-post-btn");
 const newPostModal = document.querySelector("#new-post-modal");
+
+// New Post - FORM ITEMS
 const linkInput = addCardFormElement.querySelector("#post-img-link");
 const captionInput = addCardFormElement.querySelector("#post-caption");
+const addCardSubmitBtn = addCardFormElement.querySelector(".modal__submit-btn");
 
 // Open Post
 const openCardModal = document.querySelector("#open-image-modal");
+
 const openCardElement = openCardModal.querySelector(".modal__container-images");
 const openCardImage = openCardElement.querySelector(".modal__picture");
 const openCardCaption = openCardElement.querySelector(".modal__title");
@@ -57,43 +72,31 @@ const cardsList = document.querySelector(".cards-list");
 
 
 // Open/Close Functions
-function openModal (modal) {
-  modal.classList.add("modal_is-opened");
-};
-
-function closeModal (modal) {
+allModals.forEach(modal => modal.querySelector(".modal__exit").addEventListener("click", () => {
   modal.classList.remove("modal_is-opened");
+}));
+
+const openModal = modal => {
+  const closeBtn = modal.querySelector(".modal__close-btn");
+  function escapeModal (evt) {
+    if (evt.key == "Escape") {
+      document.removeEventListener("keydown", escapeModal);
+      closeModal(modal);
+    }
+  }
+
+  modal.classList.add("modal_is-opened");
+  document.addEventListener("keydown", escapeModal);
+
+  closeBtn.addEventListener("click", () => {
+      document.removeEventListener("keydown", escapeModal);
+      closeModal(modal)
+  });
 };
 
-// --------------- Edit Profile---------------- //
-editProfileBtn.addEventListener("click", () => {
-  const name = profileNameElement.textContent;
-  const job = profileJobElement.textContent;
+const closeModal = modal => modal.classList.remove("modal_is-opened");
 
-  nameInput.value = name;
-  jobInput.value = job;
-
-  openModal(editProfileModal);
-});
-
-function handleProfileFormSubmit (evt) {
-  evt.preventDefault();
-  console.log(nameInput.value, jobInput.value)
-
-  const name = nameInput.value;
-  const job = jobInput.value;
-
-  profileNameElement.textContent = name;
-  profileJobElement.textContent = job;
-
-  closeModal(editProfileModal);
-};
-
-closeEditProfile.addEventListener("click", function () {
-  closeModal(editProfileModal);
-});
-
-// ---------------- New Post ------------------ //
+// -------------- Innitial Cards ----------------//
 function getCardElement(data) {
   const cardTemplateCopy = cardTemplate.cloneNode(true);
   const cardTitle = cardTemplateCopy.querySelector(".card__name");
@@ -113,17 +116,9 @@ function getCardElement(data) {
     openModal(openCardModal);
   });
 
-  closeCardBtn.addEventListener("click", () => {
-    closeModal(openCardModal);
-  });
-
-  cardLike.addEventListener("click", () => {
-    cardLike.classList.toggle("card__like--liked");
-  });
-
-  cardDelete.addEventListener("click", () => {
-    cardToDelete.remove();
-  });
+  cardLike.addEventListener("click", () => {cardLike.classList.toggle("card__like--liked")});
+  cardDelete.addEventListener("click", () => {cardToDelete.remove()});
+  closeCardBtn.addEventListener("click", closeModal(openCardModal));
 
   return cardTemplateCopy;
 };
@@ -133,10 +128,37 @@ initialCards.forEach((card) => {
   cardsList.append(post);
 });
 
+// --------------- Edit Profile---------------- //
+// Open Profile Editor
+editProfileBtn.addEventListener("click", () => {
+  const name = profileNameElement.textContent;
+  const job = profileJobElement.textContent;
+
+  nameInput.value = name;
+  jobInput.value = job;
+
+  openModal(editProfileModal);
+});
+
+// Submit Edit
+function handleProfileFormSubmit (evt) {
+  evt.preventDefault();
+
+  const name = nameInput.value;
+  const job = jobInput.value;
+  profileNameElement.textContent = name;
+  profileJobElement.textContent = job;
+
+  closeModal(editProfileModal);
+};
+
+// ---------------- New Post ------------------ //
+// Open New Post
 newPostBtn.addEventListener("click", () => {
   openModal(newPostModal);
 });
 
+// Submit New Post
 function handleAddCardSubmit(evt) {
   evt.preventDefault();
 
@@ -148,11 +170,9 @@ function handleAddCardSubmit(evt) {
   cardsList.prepend(getCardElement(newCard));
   closeModal(newPostModal);
   addCardFormElement.reset();
+  disabledItem(addCardSubmitBtn);
 };
 
-closeNewPost.addEventListener("click", () => {
-  closeModal(newPostModal);
-});
 
 
 // -------- Form Submits -------- //

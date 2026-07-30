@@ -9,13 +9,21 @@
   bottom: 0;
   left: 0;
   z-index: 2;
-  padding: 0 10px;
-  background: #00000080;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   transition: visibility 0s linear 0.5s,
               opacity 0.5s linear;
+}
+
+.modal__exit {
+  position: absolute;
+  z-index: -1;
+  border: none;
+  height: 100%;
+  width: 100vw;
+  background: #00000080;
 }
 
 .modal_is-opened {
@@ -25,10 +33,10 @@
 }
 
 .modal__container {
-  box-sizing: content-box;
+  box-sizing: border-box;
   max-width: 730px;
   width: 100%;
-  padding: 36px 50px 32px;
+  padding: 32px 50px;
   width: calc(100% - 40px);
   background-color: white;
   border-radius: 8px;
@@ -66,33 +74,67 @@
 
 .modal__form {
   gap: 32px;
+  padding: 0;
+  margin: 0;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   font-size: 16px;
   width: 100%;
+  border: none;
 }
 
 .modal__label {
   display: flex;
   flex-direction: column;
+  color: #212121B2;
   gap: 8px;
+  font-size: 16px;
 }
-
 .modal__input {
   border-radius: 8px;
   font-size: 20px;
-  padding: 14px 10px;
+  padding: 12px 10px;
   color: #212121;
-  border-color: rgba(33, 33, 33, 40%);
+  border: 1px solid rgba(33, 33, 33, 40%);
+}
+
+.modal__input:hover {
+  border-color: rgba(33, 33, 33, 1);
+}
+
+.modal__input_type_error {
+  border-color: #FF000099;
+}
+
+.modal__input_type_error:hover {
+  border-color: #FF000099;
+}
+
+.modal__input_type_error:focus-visible {
+  outline-color: #FF000099;
 }
 
 .modal__input::placeholder {
   color: #2121214d;
 }
 
-.modal__input:hover {
-  border-color: rgba(33, 33, 33, 1);
+.modal__error {
+  color: #FF0000B2;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: none;
+  visibility: hidden;
+}
+
+.modal__error_active {
+  display: inline;
+  visibility: visible;
+}
+
+.modal__submit_inactive {
+  opacity: 0.5;
 }
 
 .modal__submit-btn {
@@ -109,21 +151,23 @@
 }
 
 .modal__submit-btn:hover {
-  background-color: #21212160;
+  background-color: #212121CC;
 }
 
 .modal__container-images {
   padding: 0;
   box-sizing: border-box;
   display: flex;
+  align-content: center;
+  flex-wrap: wrap;
   flex-direction: column;
   color: white;
   gap: 8px;
+  margin: 0 auto;
 }
 
 
 .modal__picture {
-  width: 100%;
   max-width: 80vw;
   max-height: 80vh;
   border-radius: 8px;
@@ -173,7 +217,7 @@
     max-width: 300px;
   }
 
-  .modal__form {
+  .modal__form-set {
     gap: 24px;
   }
 
