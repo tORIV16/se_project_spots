@@ -214,7 +214,8 @@
   }
 
   .modal__container-images {
-    max-width: 300px;
+    max-width: 100%;
+    width: 100%;
   }
 
   .modal__form-set {
@@ -238,7 +239,10 @@
   }
 
   .modal__picture {
-    max-width: none;
+    max-width: 100%;
+    max-height: none;
+    width: 100%;
+    object-fit: contain;
   }
 
   .modal__title {
@@ -247,6 +251,6 @@
 
   .modal__close-btn_type_preview {
     transform: none;
-    max-width: 300px;
+    align-self: flex-end;
   }
 }

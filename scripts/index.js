@@ -27,7 +27,6 @@ const addCardFormElement = document.forms[1];
 
 //Modals
 const allModals = document.querySelectorAll(".modal");
-console.log(allModals);
 
 
 
@@ -66,7 +65,7 @@ const closeEditProfile = editProfileModal.querySelector(".modal__close-btn");
 const closeNewPost = newPostModal.querySelector(".modal__close-btn");
 const closeCardBtn = openCardElement.querySelector(".modal__close-btn");
 
-// Card Posts Hard
+// Card Posts
 const cardTemplate = document.querySelector("#card-template").content;
 const cardsList = document.querySelector(".cards-list");
 
@@ -118,7 +117,6 @@ function getCardElement(data) {
 
   cardLike.addEventListener("click", () => {cardLike.classList.toggle("card__like--liked")});
   cardDelete.addEventListener("click", () => {cardToDelete.remove()});
-  closeCardBtn.addEventListener("click", closeModal(openCardModal));
 
   return cardTemplateCopy;
 };
@@ -136,6 +134,8 @@ editProfileBtn.addEventListener("click", () => {
 
   nameInput.value = name;
   jobInput.value = job;
+
+  resetValidation(profileFormElement, [nameInput, jobInput], editProfileSubmitBtn);
 
   openModal(editProfileModal);
 });

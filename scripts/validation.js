@@ -49,6 +49,15 @@ const disabledItem = (buttonElement) => {
     buttonElement.disabled = true;
 }
 
+const resetValidation = (formElement, inputList, buttonElement) => {
+  inputList.forEach(inputElement => {
+    hideInputError(formElement, inputElement);
+  });
+  if (buttonElement) {
+    toggleButtonState(inputList, buttonElement);
+  }
+}
+
 const setEventListeners = formElement => {
   const inputList = Array.from(formElement.querySelectorAll(settings.inputSelector));
   const buttonElement = formElement.querySelector(settings.submitButtonSelector);
